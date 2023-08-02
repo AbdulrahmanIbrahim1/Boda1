@@ -1,0 +1,336 @@
+:root {
+    --back: #eee;
+}
+*{
+    box-sizing: border-box;
+    
+}
+.flex0 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    background-color: var(--back);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 5px 0px #ff7300, -7px 0px rgb(0, 174, 255);
+    color: #ff7300;
+}
+
+.parent {
+    background-color: var(--back);
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.parent div {
+    width: calc(88% /3);
+    background-color: rgba(249, 3, 3, 0.729);
+    height: 30px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.parent1 {
+    background-color: var(--back);
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 10px 25px;
+    margin: 0 auto;
+}
+
+.parent1 div {
+    display: flex;
+    background-color: rgb(82, 143, 173);
+    width: calc(88% /3);
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex: 0 1 30%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px -2%;
+}
+
+.parent1 .one {
+    order: 6;
+    align-self: flex-end;
+}
+
+.parent1 .two {
+    order: 5;
+}
+
+.parent1 .three {
+    align-self: flex-start;
+}
+
+.parent1 .five {
+    order: 4;
+}
+
+.parent1 .six {
+    order: -1;
+}
+
+.parent2 {
+    background-color: var(--back);
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 15px;
+}
+
+.parent2 div {
+    display: flex;
+    color: white;
+    background-color: rgb(13, 164, 164);
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    flex: 0 1 30%;
+    justify-content: center;
+}
+
+.parent2 .two {
+    align-self: flex-start;
+    width: 50%;
+}
+
+.parent3 {
+    background-color: var(--back);
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.parent3 div {
+    width: 20%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    flex: 0 1 15%;
+}
+
+.parent3 .one {
+    background-color: rgb(168, 168, 23);
+}
+
+.parent3 .two {
+    align-self: flex-end;
+    background-color: green;
+}
+
+.parent3 .three {
+    background-color: brown;
+}
+
+.parent3 .four {
+    align-self: flex-end;
+    order: -1;
+    background-color: slateblue;
+}
+
+
+.page {
+    background-color: #eee;
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header {
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px;
+
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 0 0 7px;
+}
+
+.header .logo {
+    background-color: #ddd;
+    flex-basis: 9%;
+    padding: 15px 20px;
+}
+
+.header .links {
+    background-color: #ddd;
+    padding: 10px;
+    flex-basis: 82%;
+    text-align: right;
+}
+
+.main-area {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+
+.main-area .content,
+.main-area .sidebar {
+    background-color: #ddd;
+    display: flex;
+    margin: 0 0 10px;
+    height: 500px;
+    padding: 10px;
+}
+
+.main-area .content {
+    flex-basis: 64%;
+}
+
+.main-area .sidebar {
+    flex-basis: 31%;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding: 10px;
+    background-color: #ddd;
+}
+/* ======================================================================================================================= */
+
+.grad{
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    margin: 0 auto;
+    position: relative;
+}
+.grad::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background-image: linear-gradient(to right,
+    red 10% ,
+    green 10% , 
+    green 20%,
+    blue 20% ,
+    blue 30% , 
+    white 30% ,
+    white 40% ,
+    blueviolet 40% ,
+    blueviolet 50% , 
+    black 50% ,
+    black 60% , 
+    yellow 60% , 
+    yellow 70% , 
+    rgb(128, 0, 117) 70% ,  
+    rgb(128, 0, 117) 80% , 
+    orange 80% ,
+    orange 90% ,
+    red 90%)
+}
+
+.grad2{
+    width: 600px;
+    height: 50px;
+    margin:0 auto;
+    background-color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    border-left: 5px solid #f44336;
+    border-right: 5px solid rgb(85, 0, 255);
+
+}
+.grad2::first-letter{
+    color: orangered;
+}
+
+.grad2::before{
+    content: '';
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        left: -4.5px;
+        width: 101.5%;
+        height: 5px;
+        background-image: linear-gradient(to right, #f44336 20%,
+        rgb(0, 149, 255) 20%, rgb(0, 149, 255) 40%, rgb(44, 169, 44) 40%, rgb(44, 169, 44) 60%, 
+        rgb(207, 28, 58) 60%, rgb(207, 28, 58) 80%, rgb(85, 0, 255) 80%);
+
+}
+.grad2::after{
+        content: '';
+            position: absolute;
+            bottom  : -5px;
+            right: 0px;
+            left: -4.5px;
+            width: 101.5%;
+            height: 5px;
+            background-image: linear-gradient(to right, #f44336 20%, 
+            rgb(0, 149, 255) 20%, rgb(0, 149, 255) 40%, rgb(44, 169, 44) 40%, rgb(44, 169, 44) 60%, 
+            rgb(207, 28, 58) 60%, rgb(207, 28, 58) 80%, rgb(85, 0, 255) 80%);
+}
+.txt{
+    background-color: #eee;
+    width: 600px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px auto;
+    border-style: none;
+    caret-color: red;
+    position: relative;
+}
+
+.txt::after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff7300;
+    background-image: linear-gradient(to right, rgb(212 30 30) 50%,rgb(44, 169, 44) 50%);
+}
+input{
+    font-weight: bold;
+    width: 100%;
+    background-color: #eee;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
